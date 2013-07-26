@@ -4,41 +4,15 @@
 		<!-- Timeline for Employment  -->
 		<h3 class="main-heading">Employment</h3>
 		<ul class="timeline">
+		{% for employer in site.categories.employer %}
 			<li>
 				<div class="timelineUnit">
-					<h4>Developer<span class="timelineDate">2013 - Present</span></h4>
-					<h5>TopTal - toptal.com</h5>
-					<p>Full stack development. Backend: Django or Ruby on Rails.</p>
+					<h4>{{ employer.job }}<span class="timelineDate">{{ employer.timespan | join: " - " }}</span></h4>
+					<h5>{{ employer.title }} - {{ employer.website }}</h5>
+					<p>{{ employer.content }}</p>
 				</div>
 			</li>
-			<li>
-				<div class="timelineUnit">
-					<h4>Software Developer<span class="timelineDate">2013</span></h4>
-					<h5>IT Solutions - its.az</h5>
-					<p>Customizing existing document flow management software written on Java, Spring and GWT for the needs of customer. Developing jBPM workflows.</p>
-				</div>
-			</li>
-			<li>
-				<div class="timelineUnit">
-					<h4>Junior Software Developer<span class="timelineDate">2010</span></h4>
-					<h5>SilverKey Egypt - egypt.silverkeytech.com</h5>
-					<p>AIESEC powered internship. Developing web applications using Python/Django.</p>
-				</div>
-			</li>
-			<li>
-				<div class="timelineUnit">
-					<h4>Webmaster<span class="timelineDate">2008 - 2011</span></h4>
-					<h5>Microsoft Azerbaijan - microsoft.az</h5>
-					<p>Localizing and maintaining microsoft.az. Also making upgrades for Microsoft Sharepoint based intranet CMS.</p>
-				</div>
-			</li>
-			<li>
-				<div class="timelineUnit">
-					<h4>Software Developer<span class="timelineDate">2008 - 2010</span></h4>
-					<h5>SilverKey Technologies - silverkey.az</h5>
-					<p>Started as an HTML cutter. Then became a web application developer using C#/.NET solutions.</p>
-				</div>
-			</li>
+		{% endfor %}
 			<div class="clear"></div>
 		</ul> 
 		<!-- /Timeline for Employment  -->
