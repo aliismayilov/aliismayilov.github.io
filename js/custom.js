@@ -234,10 +234,14 @@ jQuery(document).ready(function(){
 			$lon = '49.882222';
 
 	$map.gmap().bind('init', function(ev, map) {
-		$map.gmap('addMarker', {'position': $lat +','+ $lon  , 'bounds': true}).click(function() {
+		$map.gmap('addMarker', {
+			'position': $lat + ',' + $lon,
+			'bounds': true
+		}).click(function() {
 			$map.gmap('openInfoWindow', {'content': 'Hello World!'}, this);
 		});
 		$map.gmap('option', 'zoom', 4);
+		$map.gmap('option', 'center', new google.maps.LatLng($lat + 5, $lon - 15));
 	});
 
 	// Refresh Map
