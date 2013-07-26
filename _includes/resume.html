@@ -20,18 +20,14 @@
 		<!-- Timeline for Education  -->
 		<h3 class="main-heading">Education</h3>
 		<ul class="timeline">
+		{% for education in site.categories.education %}
 			<li>
 				<div class="timelineUnit">
-					<h4>System Programming<span class="timelineDate">2013 - present</span></h4>
-					<h5>Baku State University</h5>
+					<h4>{{ education.title }}<span class="timelineDate">{{ education.timespan | join: " - " }}</span></h4>
+					<h5>{{ education.school }}</h5>
 				</div>
 			</li>
-			<li>
-				<div class="timelineUnit">
-					<h4>Applied Mathematics<span class="timelineDate">2007 - 2011</span></h4>
-					<h5>Baku State University</h5>
-				</div>
-			</li>
+		{% endfor %}
 			<div class="clear"></div>
 		</ul> 
 		<!-- /Timeline for Education  -->
