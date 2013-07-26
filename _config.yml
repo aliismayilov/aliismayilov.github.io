@@ -1,3 +1,13 @@
-name: Your New Jekyll Site
+name: Ali Ismayilov
 markdown: redcarpet
-pygments: true
+url: alii.pro
+
+# my variables
+my:
+  name: Ali Ismayilov
+  profession: web application developer
+  description: I constantly keep up to date with new web technologies.
+  birthday: 1989-12-30
+  address: Baku, Azerbaijan
+  email: ali@ismailov.info
+  mobile: +994 50 796 66 13
