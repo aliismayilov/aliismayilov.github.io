@@ -249,4 +249,13 @@ jQuery(document).ready(function(){
 		$map.gmap('refresh');
 	});
 
+
+	// show and update every second my local time
+	setInterval(function () {
+		$('div.contact-info ul li time').text(getLocalTime("Asia/Baku"));
+	}, 1000);
 });
+
+function getLocalTime(zone) {
+	return moment().tz(zone).format('HH:mm');
+}
