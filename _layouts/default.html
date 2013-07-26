@@ -6,7 +6,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/> 
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/> 
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css"/>
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic"/>
@@ -43,15 +43,7 @@
                 </div>
                 <!-- /Logo -->
                 
-                <!-- Social Icons -->
-                <ul class="socialicons">
-                    <li class="socials-text">Social Profiles</li>
-                  <li><a href="{{ site.my.facebook_url }}" class="transition" target="_blank">&#x2a;</a></li>
-                    <li><a href="{{ site.my.twitter_url }}" class="transition" target="_blank">&#x2c;</a></li>
-                    <!-- <li><a href="#" class="transition">&#x2d;</a></li>
-                    <li><a href="#" class="transition">&#x31;</a></li> -->
-                </ul>
-                <!-- /Social Icons -->
+                {% include social_icons.html %}
             </header>
             <!-- /Header -->
             
