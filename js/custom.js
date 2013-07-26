@@ -230,14 +230,14 @@ jQuery(document).ready(function(){
 	// Needed variables
 	var $map = $('#map'),
 			$tabContactClass = ('tab-contact'),
-			$lat = '-37.81759',
-			$lon = '144.964557';
+			$lat = '40.395278',
+			$lon = '49.882222';
 
 	$map.gmap().bind('init', function(ev, map) {
 		$map.gmap('addMarker', {'position': $lat +','+ $lon  , 'bounds': true}).click(function() {
 			$map.gmap('openInfoWindow', {'content': 'Hello World!'}, this);
 		});
-		$map.gmap('option', 'zoom', 16);
+		$map.gmap('option', 'zoom', 4);
 	});
 
 	// Refresh Map
