@@ -257,5 +257,5 @@ jQuery(document).ready(function(){
 });
 
 function getLocalTime(zone) {
-	return moment().tz(zone).format('HH:mm');
+	return moment().tz(zone).format('h:mm a');
 }
