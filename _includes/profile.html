@@ -1,28 +1,28 @@
 <!-- Profile -->
 <div id="profile"> 
-  <!-- About section -->
-  <div class="about">
-      <div class="photo-inner">
-            <ul>
-                <li><img src="images/photo.jpg" height="186" width="153" /></li>
-                <li><img src="images/photo1.png" height="186" width="153" /></li>
-            </ul>
-        </div>
-        <h1>{{ site.my.name | upcase }}</h1>
-        <h3>{{ site.my.profession | upcase }}</h3>
-        <p>{{ site.my.description }}</p>
-    </div>
-    <!-- /About section -->
-     
-    <!-- Personal info section -->
-  <ul class="personal-info">
-<li><label>Name</label><span>{{ site.my.name }}</span></li>
-        <li><label>Birthday</label><span>{{ site.my.birthday | date: "%B %d, %Y" }}</span></li>
-        <li><label>Address</label><span>{{ site.my.address }}</span></li>
-        <li><label>Email</label><span class="word-wrap">{{ site.my.email }}</span></li>
-        <li><label>Phone</label><span>{{ site.my.mobile }}</span></li>
-        <li><label>Website</label><span class="word-wrap">{{ site.url }}</span></li>
-    </ul>
-    <!-- /Personal info section -->
-</div>        
-<!-- /Profile --> 
+	<!-- About section -->
+	<div class="about">
+		<div class="photo-inner">
+			<ul>
+				<li><img src="assets/photo/profile.jpg" height="197" width="153" /></li>
+				<li><img src="assets/photo/profile-grayscale.jpg" height="197" width="153" /></li>
+			</ul>
+		</div>
+		<h1>{{ site.my.name | upcase }}</h1>
+		<h3>{{ site.my.profession | upcase }}</h3>
+		<p>{{ site.my.description }}</p>
+	</div>
+	<!-- /About section -->
+
+	<!-- Personal info section -->
+	<ul class="personal-info">
+		<li><label>Name</label><span>{{ site.my.name }}</span></li>
+		<li><label>Birthday</label><span>{{ site.my.birthday | date: "%B %d, %Y" }}</span></li>
+		<li><label>Address</label><span>{{ site.my.address }}</span></li>
+		<li><label>Email</label><span class="word-wrap">{{ site.my.email }}</span></li>
+		<li><label>Phone</label><span>{{ site.my.mobile }}</span></li>
+		<li><label>Website</label><span class="word-wrap">{{ site.url }}</span></li>
+	</ul>
+	<!-- /Personal info section -->
+</div>
+<!-- /Profile -->
