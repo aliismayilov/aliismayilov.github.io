@@ -2,6 +2,7 @@
 <section id="portfolio">
 	<ul class="cats-filter" id="portfolio-filter">
 		<li><a href="" class="current transition" data-filter="*">All</a></li>
+		<li><a href="" class="transition" data-filter=".coding">Coding</a></li>
 		<li><a href="" class="transition" data-filter=".webdesign">WebDesign</a></li>
 		<li><a href="" class="transition" data-filter=".photography">Photography</a></li>
 		<li><a href="" class="transition" data-filter=".illustration">Illustration</a></li>
@@ -12,11 +13,7 @@
 	<ul id="portfolio-list">
 	{% for project in site.categories.project %}
 		<li class="{{ project.tags | join: " " }}">
-			<a href="{{ project.url }}" rel="portfolio" class="folio">
-			  <img src="{{ project.thumbnail }}" alt="" >
-			  <h2 class="title">{{ project.title }}</h2>
-			  <span class="categorie">{{ project.tags | join: " / " }}</span>
-			</a>
+			{{ project.content }}
 		</li>
 	{% endfor %}
 	</ul>
