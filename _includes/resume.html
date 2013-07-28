@@ -31,6 +31,21 @@
 			<div class="clear"></div>
 		</ul> 
 		<!-- /Timeline for Education  -->
+
+		<!-- Timeline for Certification  -->
+		<h3 class="main-heading">Certification</h3>
+		<ul class="timeline">
+		{% for certification in site.categories.certification %}
+			<li>
+				<div class="timelineUnit">
+					<h4>{{ certification.title }}<span class="timelineDate">{{ certification.date | date: "%Y" }}</span></h4>
+					<h5>{{ certification.provider }}</h5>
+				</div>
+			</li>
+		{% endfor %}
+			<div class="clear"></div>
+		</ul> 
+		<!-- /Timeline for Certification  -->
 	</div>
 
 	<div class="skills-section">
