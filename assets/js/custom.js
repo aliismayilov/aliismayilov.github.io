@@ -230,8 +230,8 @@ jQuery(document).ready(function(){
 	// Needed variables
 	var $map = $('#map'),
 			$tabContactClass = ('tab-contact'),
-			$lat = '40.395278',
-			$lon = '49.882222';
+			$lat = '-22.948833',
+			$lon = '-43.193128';
 
 	$map.gmap().bind('init', function(ev, map) {
 		$map.gmap('addMarker', {
@@ -240,8 +240,8 @@ jQuery(document).ready(function(){
 		}).click(function() {
 			$map.gmap('openInfoWindow', {'content': 'Hello World!'}, this);
 		});
-		$map.gmap('option', 'zoom', 4);
-		$map.gmap('option', 'center', new google.maps.LatLng($lat + 5, $lon - 15));
+		$map.gmap('option', 'zoom', 5);
+		$map.gmap('option', 'center', new google.maps.LatLng($lat, $lon));
 	});
 
 	// Refresh Map
@@ -252,7 +252,7 @@ jQuery(document).ready(function(){
 
 	// show and update every second my local time
 	setInterval(function () {
-		$('div.contact-info ul li time').text(getLocalTime("Asia/Baku"));
+		$('div.contact-info ul li time').text(getLocalTime("America/Sao_Paulo"));
 	}, 1000);
 });
 
