@@ -46,6 +46,21 @@
 			<div class="clear"></div>
 		</ul> 
 		<!-- /Timeline for Certification  -->
+
+		<!-- Timeline for Courses  -->
+		<h3 class="main-heading">Courses</h3>
+		<ul class="timeline">
+		{% for course in site.categories.course %}
+			<li>
+				<div class="timelineUnit">
+					<h4><a href="{{ course.pdf_file }}" target="_blank">{{ course.title }}</a><span class="timelineDate">{{ course.date | date: "%Y" }}</span></h4>
+					<h5>{{ course.provider }}</h5>
+				</div>
+			</li>
+		{% endfor %}
+			<div class="clear"></div>
+		</ul> 
+		<!-- /Timeline for Certification  -->
 	</div>
 
 	<div class="skills-section">
