@@ -1,17 +1,3 @@
 name: Ali Ismayilov - professional page
 markdown: redcarpet
 url: alii.pro
-
-# my variables
-my:
-  name: Ali Ismayilov
-  profession: web application developer
-  description: I constantly keep up to date with new web technologies.
-  birthday: 1989-12-30
-  address: 'Rio de Janeiro, Brazil'
-  email: ali@ismailov.info
-  mobile: '+55 21 983185597'
-  skype: aliismayilov
-  facebook_url: https://www.facebook.com/ali.ismayilov
-  twitter_url: https://twitter.com/qaralama
-  github_url: https://github.com/aliismayilov

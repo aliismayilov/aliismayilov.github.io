@@ -1,5 +1,5 @@
 <!-- Profile -->
-<div id="profile"> 
+<div id="profile">
 	<!-- About section -->
 	<div class="about">
 		<div class="photo-inner">
@@ -8,19 +8,19 @@
 				<li><img src="assets/photo/profile-grayscale.jpg" height="197" width="153" /></li>
 			</ul>
 		</div>
-		<h1>{{ site.my.name | upcase }}</h1>
-		<h3>{{ site.my.profession | upcase }}</h3>
-		<p>{{ site.my.description }}</p>
+		<h1>{{ site.data.my.name | upcase }}</h1>
+		<h3>{{ site.data.my.profession | upcase }}</h3>
+		<p>{{ site.data.my.description }}</p>
 	</div>
 	<!-- /About section -->
 
 	<!-- Personal info section -->
 	<ul class="personal-info">
-		<li><label>Name</label><span>{{ site.my.name }}</span></li>
-		<li><label>Birthday</label><span>{{ site.my.birthday | date: "%B %d, %Y" }}</span></li>
-		<li><label>Address</label><span>{{ site.my.address }}</span></li>
-		<li><label>Email</label><span class="word-wrap">{{ site.my.email }}</span></li>
-		<li><label>Phone</label><span>{{ site.my.mobile }}</span></li>
+		<li><label>Name</label><span>{{ site.data.my.name }}</span></li>
+		<li><label>Birthday</label><span>{{ site.data.my.birthday | date: "%B %d, %Y" }}</span></li>
+		<li><label>Address</label><span>{{ site.data.my.address }}</span></li>
+		<li><label>Email</label><span class="word-wrap">{{ site.data.my.email }}</span></li>
+		<li><label>Phone</label><span>{{ site.data.my.mobile }}</span></li>
 		<li><label>Website</label><span class="word-wrap">{{ site.url }}</span></li>
 	</ul>
 	<!-- /Personal info section -->
