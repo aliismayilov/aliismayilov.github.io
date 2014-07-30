@@ -1,3 +1,4 @@
 name: Ali Ismayilov - professional page
 markdown: redcarpet
 url: alii.pro
+exclude: ['Gemfile', 'Gemfile.lock', 'CNAME']
