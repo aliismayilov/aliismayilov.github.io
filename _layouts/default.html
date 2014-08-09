@@ -185,24 +185,17 @@
                   </div>
                 </div>
                 <div class="resume-info">
-                  <h4>Education</h4>
+                  <h4>Work Experience</h4>
                   <div class="sep2"></div>
                   <ul>
-                    <li>
-                      <h5>Academy of Art University</h5>
-                      <span class="year"><i class="fa fa-calendar"></i> 2001 - 2004</span>
-                      <p>Academy of Art University's School of Web Design & New Media is the intersection between traditional design and new technologies.</p>
-                    </li>
-                    <li>
-                      <h5>IT Technical Institute</h5>
-                      <span class="year"><i class="fa fa-calendar"></i> 2005 - 2008</span>
-                      <p>Information technology (IT) workers can be found in many types of organizations. According to the U.S. Department of Labor, "In the modern workplace, it is imperative that Information Technology (IT) works both effectively and reliably</p>
-                    </li>
-                    <li>
-                      <h5>Web Design School</h5>
-                      <span class="year"><i class="fa fa-calendar"></i> 2009 - 2012</span>
-                      <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat.</p>
-                    </li>
+                    {% for employer in site.categories.employer %}
+                      <li>
+                        <h5>{{ employer.job }} at {{ employer.title }}</h5>
+                        <span class="year"><i class="fa fa-calendar"></i> {{ employer.timespan | join: " - " }}</span>
+                        <p>{{ employer.content }}</p>
+                        <i>{{ employer.website }}</i>
+                      </li>
+                    {% endfor %}
                   </ul>
                 </div>
                 <div class="skills-info">
@@ -262,23 +255,23 @@
                   </ul>
                 </div>
                 <div class="resume-info">
-                  <h4>Work Experience</h4>
+                  <h4>Education</h4>
                   <div class="sep2"></div>
                   <ul>
                     <li>
-                      <h5>Graphic River</h5>
+                      <h5>Academy of Art University</h5>
                       <span class="year"><i class="fa fa-calendar"></i> 2001 - 2004</span>
-                      <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.</p>
+                      <p>Academy of Art University's School of Web Design & New Media is the intersection between traditional design and new technologies.</p>
                     </li>
                     <li>
-                      <h5>Video Hive</h5>
+                      <h5>IT Technical Institute</h5>
                       <span class="year"><i class="fa fa-calendar"></i> 2005 - 2008</span>
-                      <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
+                      <p>Information technology (IT) workers can be found in many types of organizations. According to the U.S. Department of Labor, "In the modern workplace, it is imperative that Information Technology (IT) works both effectively and reliably</p>
                     </li>
                     <li>
-                      <h5>Themeforest</h5>
-                      <span class="year"><i class="fa fa-calendar"></i> 2009 - 2014</span>
-                      <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.</p>
+                      <h5>Web Design School</h5>
+                      <span class="year"><i class="fa fa-calendar"></i> 2009 - 2012</span>
+                      <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat.</p>
                     </li>
                   </ul>
                 </div>
