@@ -7,9 +7,9 @@
   <meta charset="utf-8">
   <meta name="keywords" content="HTML5 Template" />
   <meta name="description" content="Multipress - Responsive Multipurpose HTML5 Template">
-  <meta name="author" content="{{ my.name }}">
+  <meta name="author" content="{{ site.data.my.name }}">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+  <title>{{ site.name }}</title>
 
   <!-- Mobile Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,13 +66,13 @@
           <div class="pic-bg"><img src="/assets/images/profile-avatar.png" class="img-responsive" alt=""/></div>
         </div>
         <nav>
-        <ul class="navigation">
-          <li><a href="#">Profile <i class="fa fa-user"></i></a></li>
-          <li><a href="#">Work <i class="fa fa-briefcase"></i></a></li>
-          <li><a href="#">Resume <i class="fa fa-file-text"></i></a></li>
-          <li><a href="#">Blog <i class="fa fa-comment"></i></a></li>
-          <li><a href="#">Contact <i class="fa fa-envelope"></i></a></li>
-        </ul>
+          <ul class="navigation">
+            <li><a href="#">Profile <i class="fa fa-user"></i></a></li>
+            <li><a href="#">Work <i class="fa fa-briefcase"></i></a></li>
+            <li><a href="#">Resume <i class="fa fa-file-text"></i></a></li>
+            <li><a href="#">Blog <i class="fa fa-comment"></i></a></li>
+            <li><a href="#">Contact <i class="fa fa-envelope"></i></a></li>
+          </ul>
         </nav>
       </div>
 
@@ -82,30 +82,30 @@
             <!-- SECTION 1 - HOMEPAGE -->
             <section class="no-display">
               <div class="profile" id="1">
-                <h2>Hello, I am <span>Robb Armstrong</span><br>Designer and Front-end Developer</h2>
+                <h2>Hello, I am <span>{{ site.data.my.name }}</span><br>{{ site.data.my.profession }}</h2>
                 <div class="sep1"></div>
-                <p>I have ten years experience as a web/interface designer. I have a love of clean, elegant styling, and I have lots of experience in the production of CSS and (X)HTML for modern websites. I have a reasonable grasp of using JavaScript frameworks, specifically jQuery.</p>
+                <p>I have 6 years experience as a web developer. I have a love of clean, modern frameworks, and I have lots of experience with different frameworks and architectures (including SOA). I have a reasonable grasp of using Ruby and JavaScript frameworks, including AngularJS.</p>
                 <div class="personal-info col-md-12 no-padding">
                   <h4>Personal Info</h4>
                   <div class="sep2"></div>
                   <ul>
                     <li>
-                      <div class="p-info"><em>name</em><span>Robb Armstrong</span></div>
+                      <div class="p-info"><em>name</em><span>{{ site.data.my.name }}</span></div>
                     </li>
                     <li>
-                      <div class="p-info"><em>date of birth</em><span>September 06, 1976</span></div>
+                      <div class="p-info"><em>date of birth</em><span>{{ site.data.my.birthday }}</span></div>
                     </li>
                     <li>
-                      <div class="p-info"><em>e-mail</em><span>info@yourdomain.com</span></div>
+                      <div class="p-info"><em>e-mail</em><span>{{ site.data.my.email }}</span></div>
                     </li>
                     <li>
-                      <div class="p-info"><em>address</em><span>121 King St, Melbourne VIC</span></div>
+                      <div class="p-info"><em>location</em><span>{{ site.data.my.location }}</span></div>
                     </li>
                     <li>
-                      <div class="p-info"><em>phone</em><span>012-3456-7890</span></div>
+                      <div class="p-info"><em>mobile</em><span>{{ site.data.my.mobile }}</span></div>
                     </li>
                     <li>
-                      <div class="p-info"><em>website</em><span>www.themeforest.net</span></div>
+                      <div class="p-info"><em>website</em><span>{{ site.url }}</span></div>
                     </li>
                   </ul>
                 </div>
@@ -137,168 +137,27 @@
                   <div class="row">
                     <ul id="filter-list" class="clearfix">
                       <li class="filter" data-filter="all"><i class="fa fa-th"></i> All</li>
-                      <li class="filter" data-filter="webdesign">Web Design</li>
-                      <li class="filter" data-filter="appicon">App Icons</li>
-                      <li class="filter" data-filter="iosappui">iOS App UI</li>
-                      <li class="filter" data-filter="illustration">Illustration</li>
+                      <li class="filter" data-filter="ruby-on-rails">Ruby on Rails</li>
+                      <li class="filter" data-filter="django">Django</li>
+                      <li class="filter" data-filter="node-js">Node.js</li>
+                      <li class="filter" data-filter="front-end">Front-end</li>
                     </ul>
                     <ul id="portfolio">
-                      <li class="item col-md-4 webdesign">
-                        <a href="/assets/images/projects/1-big.jpg" class="nivo-lbox">
-                          <div class="folio-img">
-                            <img src="/assets/images/projects/1.jpg" alt="" class="img-responsive">
-                            <div class="overlay">
-                              <div class="overlay-inner">
-                                <h4>Cool App Design</h4>
-                                <p>branding, logo</p>
+                      {% for project in site.categories.project %}
+                        <li class="item col-md-4 {{ project.tags | join: " " }}">
+                          <a href="{{ project.image }}" class="nivo-lbox">
+                            <div class="folio-img">
+                              <img src="{{ project.thumbnail }}" alt="" class="img-responsive">
+                              <div class="overlay">
+                                <div class="overlay-inner">
+                                  <h4>{{ project.title }}</h4>
+                                  <p>{{ project.description }}</p>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="item col-md-4 illustration">
-                        <a href="https://www.youtube.com/watch?v=L9szn1QQfas" class="nivo-lbox">
-                          <div class="folio-img">
-                            <img src="/assets/images/projects/2.jpg" alt="" class="img-responsive">
-                            <div class="overlay">
-                              <div class="overlay-inner">
-                                <h4>Cool App Design</h4>
-                                <p>branding, logo</p>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="item col-md-4 appicon">
-                        <a href="http://vimeo.com/71071717" class="nivo-lbox">
-                          <div class="folio-img">
-                            <img src="/assets/images/projects/3.jpg" alt="" class="img-responsive">
-                            <div class="overlay">
-                              <div class="overlay-inner">
-                                <h4>Cool App Design</h4>
-                                <p>branding, logo</p>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="item col-md-4 iosappui">
-                        <a href="/assets/images/projects/1-big.jpg" class="nivo-lbox">
-                          <div class="folio-img">
-                            <img src="/assets/images/projects/4.jpg" alt="" class="img-responsive">
-                            <div class="overlay">
-                              <div class="overlay-inner">
-                                <h4>Cool App Design</h4>
-                                <p>branding, logo</p>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="item col-md-4 iosappui">
-                        <a href="/assets/images/projects/1-big.jpg" class="nivo-lbox">
-                          <div class="folio-img">
-                            <img src="/assets/images/projects/5.jpg" alt="" class="img-responsive">
-                            <div class="overlay">
-                              <div class="overlay-inner">
-                                <h4>Cool App Design</h4>
-                                <p>branding, logo</p>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="item col-md-4 illustration">
-                        <a href="/assets/images/projects/1-big.jpg" class="nivo-lbox">
-                          <div class="folio-img">
-                            <img src="/assets/images/projects/6.jpg" alt="" class="img-responsive">
-                            <div class="overlay">
-                              <div class="overlay-inner">
-                                <h4>Cool App Design</h4>
-                                <p>branding, logo</p>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="item col-md-4 webdesign">
-                        <a href="/assets/images/projects/1-big.jpg" class="nivo-lbox">
-                          <div class="folio-img">
-                            <img src="/assets/images/projects/7.jpg" alt="" class="img-responsive">
-                            <div class="overlay">
-                              <div class="overlay-inner">
-                                <h4>Cool App Design</h4>
-                                <p>branding, logo</p>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="item col-md-4 iosappui">
-                        <a href="/assets/images/projects/1-big.jpg" class="nivo-lbox">
-                          <div class="folio-img">
-                            <img src="/assets/images/projects/8.jpg" alt="" class="img-responsive">
-                            <div class="overlay">
-                              <div class="overlay-inner">
-                                <h4>Cool App Design</h4>
-                                <p>branding, logo</p>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="item col-md-4 webdesign">
-                        <a href="/assets/images/projects/1-big.jpg" class="nivo-lbox">
-                          <div class="folio-img">
-                            <img src="/assets/images/projects/9.jpg" alt="" class="img-responsive">
-                            <div class="overlay">
-                              <div class="overlay-inner">
-                                <h4>Cool App Design</h4>
-                                <p>branding, logo</p>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="item col-md-4 illustration">
-                        <a href="/assets/images/projects/1-big.jpg" class="nivo-lbox">
-                          <div class="folio-img">
-                            <img src="/assets/images/projects/10.jpg" alt="" class="img-responsive">
-                            <div class="overlay">
-                              <div class="overlay-inner">
-                                <h4>Cool App Design</h4>
-                                <p>branding, logo</p>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="item col-md-4 appicon">
-                        <a href="/assets/images/projects/1-big.jpg" class="nivo-lbox">
-                          <div class="folio-img">
-                            <img src="/assets/images/projects/11.jpg" alt="" class="img-responsive">
-                            <div class="overlay">
-                              <div class="overlay-inner">
-                                <h4>Cool App Design</h4>
-                                <p>branding, logo</p>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li class="item col-md-4 iosappui">
-                        <a href="/assets/images/projects/1-big.jpg" class="nivo-lbox">
-                          <div class="folio-img">
-                            <img src="/assets/images/projects/12.jpg" alt="" class="img-responsive">
-                            <div class="overlay">
-                              <div class="overlay-inner">
-                                <h4>Cool App Design</h4>
-                                <p>branding, logo</p>
-                              </div>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
+                          </a>
+                        </li>
+                      {% endfor %}
                     </ul>
                   </div>
                 </div>
