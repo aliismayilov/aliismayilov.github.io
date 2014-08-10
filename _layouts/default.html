@@ -59,7 +59,7 @@
             <li><a href="#">Profile <i class="fa fa-user"></i></a></li>
             <li><a href="#">Portfolio <i class="fa fa-briefcase"></i></a></li>
             <li><a href="#">Resume <i class="fa fa-file-text"></i></a></li>
-            <li><a href="#">Blog <i class="fa fa-comment"></i></a></li>
+            <li><a href="#">Blog <i class="fa fa-pencil"></i></a></li>
             <li><a href="#">Contact <i class="fa fa-envelope"></i></a></li>
           </ul>
         </nav>
@@ -68,11 +68,7 @@
       <div class="col-md-9 r-content">
         <div class="flexslider">
           <div class="slides">
-            {% include profile.html %}
-            {% include portfolio.html %}
-            {% include resume.html %}
-            {% include blog.html %}
-            {% include contact.html %}
+            {{ content }}
           </div>
         </div>
 
@@ -87,6 +83,7 @@
 <!-- JavaScript -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="/assets/js/jquery.flexslider.js"></script>
 <script src="/assets/js/jquery.easing.js"></script>
 <script src="/assets/js/jquery.mixitup.min.js"></script>

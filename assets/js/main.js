@@ -81,3 +81,12 @@ $(function () {
   'use strict';
   $('.contact-info time').html(moment().tz('America/Sao_Paulo').format('h:mm a'));
 });
+
+/* mCustomScrollbar */
+jQuery(document).ready(function($) {
+  $(window).load(function(){
+    $(".item").mCustomScrollbar({
+      theme:"dark"
+    });
+  });
+});
