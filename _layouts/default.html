@@ -397,7 +397,7 @@
                 <div class="page-head">
                   <div class="row">
                     <div class="col-md-5">
-                      <h3>Contact Us</h3>
+                      <h3>Contact me</h3>
                     </div>
                     <div class="col-md-7">
                       <div class="np-main">
@@ -417,37 +417,12 @@
                 </div>
                 <div class="contact-info">
                   <h4>Contact info</h4>
-                  <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+                  <p>Current time in {{ site.data.my.location }}: <time></time></p>
                   <ul>
-                    <li><i class="fa fa-home"></i> lorem ipsum street</li>
-                    <li><i class="fa fa-phone"></i> +399 (500) 321 9548</li>
-                    <li><i class="fa fa-envelope"></i> info@domain.com</li>
+                    <li><i class="fa fa-envelope"></i> {{ site.data.my.email }}</li>
+                    <li><i class="fa fa-phone"></i> {{ site.data.my.mobile }}</li>
+                    <li><i class="fa fa-skype"></i> {{ site.data.my.skype }}</li>
                   </ul>
-                </div>
-                <div class="contact-form">
-                  <h4>Send us a message</h4>
-                  <form id="contactForm" action="php/contact.php" method="post">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <input type="text" name="senderName" id="senderName" placeholder="name">
-                        <input type="email" name="senderEmail" id="senderEmail" placeholder="e-mail">
-                        <input type="text" name="subject" id="subject" placeholder="Subject">
-                      </div>
-                      <div class="col-md-8">
-                        <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
-                        <button type="submit">Send Message</button>
-                      </div>
-                    </div>
-                  </form>
-                  <div id="successMessage" class="successmessage">
-                    <p><span class="success-ico"></span> Thanks for sending your message! We'll get back to you shortly.</p>
-                  </div>
-                  <div id="failureMessage" class="errormessage">
-                    <p><span class="error-ico"></span> There was a problem sending your message. Please try again.</p>
-                  </div>
-                  <div id="incompleteMessage" class="statusMessage">
-                    <p>Please complete all the fields in the form before sending.</p>
-                  </div>
                 </div>
               </div>
             </section>
@@ -486,6 +461,8 @@
 <script src="/assets/js/nivo-lightbox.min.js"></script>
 <script src="/assets/js/jquery.appear.js"></script>
 <script src="/assets/js/jquery.inview.js"></script>
+<script src="/assets/js/moment.min.js"></script>
+<script src="/assets/js/moment-timezone-with-data-2010-2020.min.js"></script>
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/contact.js"></script>
 <script src="/assets/js/animations.js"></script>

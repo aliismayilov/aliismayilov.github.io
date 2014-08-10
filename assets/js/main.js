@@ -52,11 +52,13 @@ jQuery(document).ready(function($) {
 /* Google map */
 $(function () {
   "use strict";
-	var map = new GMaps({
+  var lat = -22.948833,
+      lng = -43.193128,
+	    map = new GMaps({
 	el: "#map",
-	lat: 40.714353,
-	lng: -74.005973,
-          zoom: 15,
+	lat: lat,
+	lng: lng,
+          zoom: 6,
           zoomControl : true,
           zoomControlOpt: {
             style : "BIG",
@@ -68,27 +70,14 @@ $(function () {
           overviewMapControl: false
       });
 
-      var styles = [
-            {
-              stylers: [
-                { hue: "#00ffe6" },
-                { saturation: -100 }
-              ]
-            }
-      ];
-
-      map.addStyle({
-            styledMapName:"Styled Map",
-            styles: styles,
-            mapTypeId: "map_style"
-      });
-
-      map.setStyle("map_style");
-
       map.addMarker({
-        lat: 40.714353,
-        lng: -74.005973,
-        icon: "/assets/images/marker.png"
+        lat: lat,
+        lng: lng
       });
 });
 
+/* Moment.js */
+$(function () {
+  'use strict';
+  $('.contact-info time').html(moment().tz('America/Sao_Paulo').format('h:mm a'));
+});
