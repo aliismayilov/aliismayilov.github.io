@@ -1,28 +1,32 @@
-<!-- Profile -->
-<div id="profile">
-	<!-- About section -->
-	<div class="about">
-		<div class="photo-inner">
-			<ul>
-				<li><img src="assets/photo/profile.jpg" height="197" width="153" /></li>
-				<li><img src="assets/photo/profile-grayscale.jpg" height="197" width="153" /></li>
-			</ul>
-		</div>
-		<h1>{{ site.data.my.name | upcase }}</h1>
-		<h3>{{ site.data.my.profession | upcase }}</h3>
-		<p>I am Ruby on Rails web application developer with past experience of Django, Node.js and ASP.NET.</p>
-	</div>
-	<!-- /About section -->
-
-	<!-- Personal info section -->
-	<ul class="personal-info">
-		<li><label>Name</label><span>{{ site.data.my.name }}</span></li>
-		<li><label>Birthday</label><span>{{ site.data.my.birthday | date: "%B %d, %Y" }}</span></li>
-		<li><label>Address</label><span>{{ site.data.my.address }}</span></li>
-		<li><label>Email</label><span class="word-wrap">{{ site.data.my.email }}</span></li>
-		<li><label>Phone</label><span>{{ site.data.my.mobile }}</span></li>
-		<li><label>Website</label><span class="word-wrap">{{ site.url }}</span></li>
-	</ul>
-	<!-- /Personal info section -->
-</div>
-<!-- /Profile -->
+<section class="no-display">
+  <div class="profile" id="1">
+    <h2>Hello, I am <span>{{ site.data.my.name }}</span><br>{{ site.data.my.profession }}</h2>
+    <div class="sep1"></div>
+    <p>I have 6 years experience as a web developer. I have a love of clean, modern frameworks, and I have lots of experience with different frameworks and architectures (including SOA). I have a reasonable grasp of using Ruby and JavaScript frameworks, including AngularJS.</p>
+    <div class="personal-info col-md-12 no-padding">
+      <h4>Personal Info</h4>
+      <div class="sep2"></div>
+      <ul>
+        <li>
+          <div class="p-info"><em>name</em><span>{{ site.data.my.name }}</span></div>
+        </li>
+        <li>
+          <div class="p-info"><em>date of birth</em><span>{{ site.data.my.birthday }}</span></div>
+        </li>
+        <li>
+          <div class="p-info"><em>e-mail</em><span>{{ site.data.my.email }}</span></div>
+        </li>
+        <li>
+          <div class="p-info"><em>location</em><span>{{ site.data.my.location }}</span></div>
+        </li>
+        <li>
+          <div class="p-info"><em>mobile</em><span>{{ site.data.my.mobile }}</span></div>
+        </li>
+        <li>
+          <div class="p-info"><em>website</em><span>{{ site.url }}</span></div>
+        </li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</section>

@@ -1,20 +1,48 @@
-<!-- Portfolio -->
-<section id="portfolio">
-	<ul class="cats-filter" id="portfolio-filter">
-		<li><a href="" class="current transition" data-filter="*">All</a></li>
-		<li><a href="" class="transition" data-filter=".ruby-on-rails">Ruby on Rails</a></li>
-		<li><a href="" class="transition" data-filter=".django">Django</a></li>
-		<li><a href="" class="transition" data-filter=".node-js">Node.js</a></li>
-		<li><a href="" class="transition" data-filter=".aspnet">ASP.NET</a></li>
-		<li><a href="" class="transition" data-filter=".front-end">Front-end</a></li>
-	</ul>
-	<!-- <div class="extra-text">Some of the projects i'm proud with</div> -->
-	<ul id="portfolio-list">
-	{% for project in site.categories.project %}
-		<li class="{{ project.tags | join: " " }}">
-			{{ project.content }}
-		</li>
-	{% endfor %}
-	</ul>
+<section class="no-display">
+  <div class="works" id="2">
+    <div class="page-head">
+      <div class="row">
+        <div class="col-md-5">
+          <h3>Portfolio</h3>
+        </div>
+        <div class="col-md-7">
+          <div class="np-main">
+            <p>Go to next/previous page</p>
+            <div class="np-controls">
+              <a href="#" class="previous"><i class="fa fa-arrow-circle-left"></i></a>
+              <a href="#" class="next"><i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-wrap">
+      <div class="row">
+        <ul id="filter-list" class="clearfix">
+          <li class="filter" data-filter="all"><i class="fa fa-th"></i> All</li>
+          <li class="filter" data-filter="ruby-on-rails">Ruby on Rails</li>
+          <li class="filter" data-filter="django">Django</li>
+          <li class="filter" data-filter="node-js">Node.js</li>
+          <li class="filter" data-filter="front-end">Front-end</li>
+        </ul>
+        <ul id="portfolio">
+          {% for project in site.categories.project %}
+            <li class="item col-md-4 {{ project.tags | join: " " }}">
+              <a href="{{ project.image }}" class="nivo-lbox">
+                <div class="folio-img">
+                  <img src="{{ project.thumbnail }}" alt="" class="img-responsive">
+                  <div class="overlay">
+                    <div class="overlay-inner">
+                      <h4>{{ project.title }}</h4>
+                      <p>{{ project.description }}</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- /Portfolio -->

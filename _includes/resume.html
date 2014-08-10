@@ -1,137 +1,133 @@
-<!-- Resume -->
-<section id="resume">
-	<div class="timeline-section">
-		<!-- Timeline for Employment  -->
-		<h3 class="main-heading">Employment</h3>
-		<ul class="timeline">
-		{% for employer in site.categories.employer %}
-			<li>
-				<div class="timelineUnit">
-					<h4>{{ employer.job }}<span class="timelineDate">{{ employer.timespan | join: " - " }}</span></h4>
-					<h5>{{ employer.title }} - {{ employer.website }}</h5>
-					<p>{{ employer.content }}</p>
-				</div>
-			</li>
-		{% endfor %}
-			<div class="clear"></div>
-		</ul>
-		<!-- /Timeline for Employment  -->
-
-		<!-- Timeline for Education  -->
-		<h3 class="main-heading">Education</h3>
-		<ul class="timeline">
-		{% for education in site.categories.education %}
-			<li>
-				<div class="timelineUnit">
-					<h4>{{ education.title }}<span class="timelineDate">{{ education.timespan | join: " - " }}</span></h4>
-					<h5>{{ education.school }}</h5>
-				</div>
-			</li>
-		{% endfor %}
-			<div class="clear"></div>
-		</ul>
-		<!-- /Timeline for Education  -->
-
-		<!-- Timeline for Certification  -->
-		<h3 class="main-heading">Certification</h3>
-		<ul class="timeline">
-		{% for certification in site.categories.certification %}
-			<li>
-				<div class="timelineUnit">
-					<h4><a href="{{ certification.pdf_file }}" target="_blank">{{ certification.title }}</a><span class="timelineDate">{{ certification.date | date: "%Y" }}</span></h4>
-					<h5>{{ certification.provider }}</h5>
-				</div>
-			</li>
-		{% endfor %}
-			<div class="clear"></div>
-		</ul>
-		<!-- /Timeline for Certification  -->
-
-		<!-- Timeline for Courses  -->
-		<h3 class="main-heading">Courses</h3>
-		<ul class="timeline">
-		{% for course in site.categories.course %}
-			<li>
-				<div class="timelineUnit">
-					<h4><a href="{{ course.pdf_file }}" target="_blank">{{ course.title }}</a><span class="timelineDate">{{ course.date | date: "%Y" }}</span></h4>
-					<h5>{{ course.provider }}</h5>
-				</div>
-			</li>
-		{% endfor %}
-			<div class="clear"></div>
-		</ul>
-		<!-- /Timeline for Certification  -->
-	</div>
-
-	<div class="skills-section">
-		<!-- Skills -->
-		<h3 class="main-heading">Programming Languages</h3>
-		<ul class="skills">
-			<li>
-				<h4>Ruby</h4>
-				<div class="rating" data-rat="7"></div>
-			</li>
-			<li>
-				<h4>Python</h4>
-				<div class="rating" data-rat="6"></div>
-			</li>
-			<li>
-				<h4>Java</h4>
-				<div class="rating" data-rat="6"></div>
-			</li>
-			<li>
-				<h4>CoffeeScript</h4>
-				<div class="rating" data-rat="6"></div>
-			</li>
-			<li>
-				<h4>JavaScript</h4>
-				<div class="rating" data-rat="6"></div>
-			</li>
-			<li>
-				<h4>C#</h4>
-				<div class="rating" data-rat="5"></div>
-			</li>
-		</ul>
-		<h3 class="main-heading">Frameworks</h3>
-		<ul class="skills">
-			<li>
-				<h4>Ruby on Rails</h4>
-				<div class="rating" data-rat="7"></div>
-			</li>
-			<li>
-				<h4>AngularJS</h4>
-				<div class="rating" data-rat="6"></div>
-			</li>
-			<li>
-				<h4>Django</h4>
-				<div class="rating" data-rat="6"></div>
-			</li>
-			<li>
-				<h4>Express (Node.js)</h4>
-				<div class="rating" data-rat="5"></div>
-			</li>
-			<li>
-				<h4>ASP.NET/MVC</h4>
-				<div class="rating" data-rat="5"></div>
-			</li>
-		</ul>
-		<h3 class="main-heading">PaaS</h3>
-		<ul class="skills">
-			<li>
-				<h4>Heroku</h4>
-				<div class="rating" data-rat="7"></div>
-			</li>
-			<li>
-				<h4>Google App Engine</h4>
-				<div class="rating" data-rat="6"></div>
-			</li>
-			<li>
-				<h4>Amazon Web Services</h4>
-				<div class="rating" data-rat="5"></div>
-			</li>
-		</ul>
-	<!-- /Skills -->
-	</div>
-	<div class="clear"></div>
+<section class="no-display">
+  <div class="item resume" id="3">
+    <div class="page-head">
+      <div class="row">
+        <div class="col-md-5">
+          <h3>Resume</h3>
+        </div>
+        <div class="col-md-7">
+          <div class="np-main">
+            <p>Go to next/previous page</p>
+            <div class="np-controls">
+              <a href="#" class="previous"><i class="fa fa-arrow-circle-left"></i></a>
+              <a href="#" class="next"><i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="resume-info">
+      <h4>Work Experience</h4>
+      <div class="sep2"></div>
+      <ul>
+        {% for employer in site.categories.employer %}
+          <li>
+            <h5>{{ employer.job }} at {{ employer.title }}</h5>
+            <span class="year"><i class="fa fa-calendar"></i> {{ employer.timespan | join: " - " }}</span>
+            <p>{{ employer.content }}</p>
+            <i>{{ employer.website }}</i>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="skills-info">
+      <h4>Programming Languages</h4>
+      <div class="sep2"></div>
+      <ul>
+        <li>
+          <p>Ruby <span>95%</span></p>
+          <div class="skills-bg"><span></span></div>
+        </li>
+        <li>
+          <p>JavaScript <span>90%</span></p>
+          <div class="skills-bg"><span></span></div>
+        </li>
+        <li>
+          <p>Python <span>85%</span></p>
+          <div class="skills-bg"><span></span></div>
+        </li>
+        <li>
+          <p>Java <span>78%</span></p>
+          <div class="skills-bg"><span></span></div>
+        </li>
+        <li>
+          <p>CoffeeScript <span>80%</span></p>
+          <div class="skills-bg"><span></span></div>
+        </li>
+        <li>
+          <p>C# <span>65%</span></p>
+          <div class="skills-bg"><span></span></div>
+        </li>
+      </ul>
+    </div>
+    <div class="services-info">
+      <h4>Frameworks</h4>
+      <div class="sep2"></div>
+      <ul>
+        <li>
+          <i class="fa fa-smile-o"></i>
+          <h5>Ruby on Rails</h5>
+        </li>
+        <li>
+          <i class="fa fa-html5"></i>
+          <h5>AngularJS</h5>
+        </li>
+        <li>
+          <i class="fa fa-cloud"></i>
+          <h5>Django</h5>
+        </li>
+        <li>
+          <i class="fa fa-cubes"></i>
+          <h5>AWS SDK</h5>
+        </li>
+        <li>
+          <i class="fa fa-code"></i>
+          <h5>jQuery</h5>
+        </li>
+        <li>
+          <i class="fa fa-coffee"></i>
+          <h5>ExpressJS</h5>
+        </li>
+      </ul>
+    </div>
+    <div class="resume-info">
+      <h4>Education</h4>
+      <div class="sep2"></div>
+      <ul>
+        {% for education in site.categories.education %}
+          <li>
+            <h5>{{ education.title }}</h5>
+            <span class="year"><i class="fa fa-calendar"></i> {{ education.timespan | join: " - " }}</span>
+            <p>{{ education.school }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="resume-info">
+      <h4>Certification</h4>
+      <div class="sep2"></div>
+      <ul>
+        {% for certification in site.categories.certification %}
+          <li>
+            <h5>{{ certification.title }}</h5>
+            <span class="year"><i class="fa fa-calendar"></i> {{ certification.date | date: "%Y" }}</span>
+            <p><a href="{{ certification.pdf_file }}" target="_blank">{{ certification.provider }} (PDF file)</a></p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="resume-info">
+      <h4>Courses</h4>
+      <div class="sep2"></div>
+      <ul>
+        {% for course in site.categories.course %}
+          <li>
+            <h5>{{ course.title }}</h5>
+            <span class="year"><i class="fa fa-calendar"></i> {{ course.date | date: "%Y" }}</span>
+            <p><a href="{{ course.pdf_file }}" target="_blank">{{ course.provider }} (PDF file)</a></p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </section>
-<!-- /Resume -->
