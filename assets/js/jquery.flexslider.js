@@ -254,7 +254,7 @@
           methods.controlNav.active();
 
           slider.controlNav.bind(eventType, function(event) {
-            event.preventDefault();
+            // event.preventDefault();
 
             if (watchedEvent === "" || watchedEvent === event.type) {
               var $this = $(this),
@@ -599,7 +599,7 @@
 
           if ('hidden' in document) return 'hidden';
           for (var i = 0; i < prefixes.length; i++) {
-            if ((prefixes[i] + 'Hidden') in document) 
+            if ((prefixes[i] + 'Hidden') in document)
             methods.pauseInvisible.visProp = prefixes[i] + 'Hidden';
           }
           if (methods.pauseInvisible.visProp) {
@@ -614,7 +614,7 @@
                 else (slider.vars.initDelay > 0) ? setTimeout(slider.play, slider.vars.initDelay) : slider.play(); //Didn't init before: simply init or wait for it
               }
             });
-          }       
+          }
         },
         isHidden: function() {
           return document[methods.pauseInvisible.visProp] || false;

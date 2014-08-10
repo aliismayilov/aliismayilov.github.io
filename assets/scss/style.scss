@@ -357,14 +357,14 @@ a:hover {
 	color: #2c383c;
 }
 
-#portfolio {
+.portfolio {
 	padding: 0px;
 	display: block;
 	width: 100%;
 	text-align: center;
 }
 
-#portfolio .item {
+.portfolio .item {
 	display: none;
 	opacity: 0;
 	padding: 0px 10px;
@@ -377,14 +377,14 @@ a:hover {
 	-moz-box-sizing: border-box;
 }
 
-#portfolio .item a {
+.portfolio .item a {
 	display: inline-block;
 	max-width: 100%;
 	text-decoration: none;
 	background: #fff;
 }
 
-#portfolio .item img {
+.portfolio .item img {
 	max-width: 100%;
 }
 
@@ -1162,7 +1162,7 @@ footer p {
 	font-size: 13px;
 }
 
-#portfolio .item {
+.portfolio .item {
 	width: 100%;
 }
 
@@ -1230,7 +1230,7 @@ footer {
 	width: 50%;
 }
 
-#portfolio .item {
+.portfolio .item {
 	width: 49%;
 }
 

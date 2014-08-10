@@ -1,3 +1,5 @@
+---
+---
 /* Loading Script */
 $(window).load(function() {
   "use strict";
@@ -5,28 +7,10 @@ $(window).load(function() {
     	$("#mask").delay(1000).fadeOut("slow");
     });
 
-/* Flexslider */
-$(window).load(function() {
-  "use strict";
-	$('.flexslider').flexslider({
-		animation: "fade",
-		start: function(slider) {
-			$('.np-controls a.next').click(function(event){
-				event.preventDefault();
-				slider.flexAnimate(slider.getTarget("next"));
-			});
-			$('.np-controls a.previous').click(function(event){
-				event.preventDefault();
-				slider.flexAnimate(slider.getTarget("previous"));
-			});
-		}
-	});
-});
-
 /* Mixitup Portfolio */
 jQuery(document).ready(function($) {
   "use strict";
-	$('#portfolio').mixitup({
+	$('.portfolio').mixitup({
 		targetSelector: '.item',
 		transitionSpeed: 450
 	});

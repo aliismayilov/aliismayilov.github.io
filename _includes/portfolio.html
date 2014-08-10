@@ -2,17 +2,8 @@
   <div class="works" id="2">
     <div class="page-head">
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-12">
           <h3>Portfolio</h3>
-        </div>
-        <div class="col-md-7">
-          <div class="np-main">
-            <p>Go to next/previous page</p>
-            <div class="np-controls">
-              <a href="#" class="previous"><i class="fa fa-arrow-circle-left"></i></a>
-              <a href="#" class="next"><i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -25,7 +16,7 @@
           <li class="filter" data-filter="node-js">Node.js</li>
           <li class="filter" data-filter="front-end">Front-end</li>
         </ul>
-        <ul id="portfolio">
+        <ul class="portfolio">
           {% for project in site.categories.project %}
             <li class="item col-md-4 {{ project.tags | join: " " }}">
               <a href="{{ project.image }}" class="nivo-lbox">

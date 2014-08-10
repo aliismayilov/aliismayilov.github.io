@@ -26,17 +26,17 @@ $(window).scroll(function() {
 			$(this).addClass("animated flipInX");
 		}
 	});
-});		
+});
 
 $(window).scroll(function() {
-	$('#portfolio .item').each(function(){
+	$('.portfolio .item').each(function(){
 	var imagePos = $(this).offset().top;
 	var topOfWindow = $(window).scrollTop();
 		if (imagePos < topOfWindow+500) {
 			$(this).addClass("animated flipInX");
 		}
 	});
-});	
+});
 
 $(window).scroll(function() {
 	$('.page-head').each(function(){
@@ -46,7 +46,7 @@ $(window).scroll(function() {
 			$(this).addClass("animated fadeInDown");
 		}
 	});
-});	
+});
 
 $(window).scroll(function() {
 	$('.resume-info').each(function(){
@@ -56,7 +56,7 @@ $(window).scroll(function() {
 			$(this).addClass("animated slideInLeft");
 		}
 	});
-});	
+});
 
 $(window).scroll(function() {
 	$('.services-info li').each(function(){
@@ -66,7 +66,7 @@ $(window).scroll(function() {
 			$(this).addClass("animated flipInX");
 		}
 	});
-});	
+});
 
 $(window).scroll(function() {
 	$('article').each(function(){
@@ -76,7 +76,7 @@ $(window).scroll(function() {
 			$(this).addClass("animated flipInX");
 		}
 	});
-});	
+});
 
 $(window).scroll(function() {
 	$('.contact-form').each(function(){
@@ -86,4 +86,4 @@ $(window).scroll(function() {
 			$(this).addClass("animated fadeInUp");
 		}
 	});
-});	
+});
