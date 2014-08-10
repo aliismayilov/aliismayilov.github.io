@@ -80,7 +80,7 @@ $(window).load(function() {
     });
   } else {
     $('.flexslider').flexslider({
-      startAt: (window.location.hash in slideMap ? slideMap[window.location.hash] : 0)
+      startAt: (window.location.hash in slideMap ? slideMap[window.location.hash] : 1)
     });
   }
 });
