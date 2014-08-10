@@ -12,11 +12,11 @@
         <article>
           <div class="row">
             {% if post.image %}
-              <div class="col-md-3">
+              <div class="col-xs-3">
                 <img src="{{ post.image }}" class="img-responsive" alt=""/>
               </div>
             {% endif %}
-            <div class="{% if post.image %}col-md-9{% else %}col-md-12{% endif %}">
+            <div class="{% if post.image %}col-xs-9{% else %}col-md-12{% endif %}">
               <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
               <div class="post-meta">
                 <i class="fa fa-calendar"></i> {{ post.date | date: "%b %-d, %Y" }}
