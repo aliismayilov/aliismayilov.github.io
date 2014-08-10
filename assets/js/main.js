@@ -1,5 +1,3 @@
----
----
 /* Loading Script */
 $(window).load(function() {
   "use strict";
@@ -64,4 +62,25 @@ $(function () {
 $(function () {
   'use strict';
   $('.contact-info time').html(moment().tz('America/Sao_Paulo').format('h:mm a'));
+});
+
+/* Flexslider */
+$(window).load(function() {
+  "use strict";
+  var slideMap = {
+    '#profile': 0,
+    '#blog': 1,
+    '#portfolio': 2,
+    '#resume': 3,
+    '#contact': 4
+  };
+  if (window.location.pathname.indexOf('/blog/') != -1) {
+    $('.flexslider').flexslider({
+      startAt: 1
+    });
+  } else {
+    $('.flexslider').flexslider({
+      startAt: (window.location.hash in slideMap ? slideMap[window.location.hash] : 0)
+    });
+  }
 });

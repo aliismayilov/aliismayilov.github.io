@@ -95,27 +95,5 @@
 <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script src="/assets/js/gmaps.js"></script>
 
-<script>
-  /* Flexslider */
-  $(window).load(function() {
-    "use strict";
-    var slideMap = {
-      '#profile': 0,
-      '#blog': 1,
-      '#portfolio': 2,
-      '#resume': 3,
-      '#contact': 4
-    }
-    $('.flexslider').flexslider({
-      startAt:
-      {% if page.url contains '/blog/' %}
-        1
-      {% else %}
-        (window.location.hash in slideMap ? slideMap[window.location.hash] : 0)
-      {% endif %}
-    });
-  });
-</script>
-
 </body>
 </html>
