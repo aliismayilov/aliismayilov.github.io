@@ -7,6 +7,49 @@
         </div>
       </div>
     </div>
+    <div class="services-info">
+      <h4>Frameworks</h4>
+      <div class="sep2"></div>
+      <ul>
+        <li>
+          <i class="fa fa-smile-o"></i>
+          <h5>Ruby on Rails</h5>
+        </li>
+        <li>
+          <i class="fa fa-html5"></i>
+          <h5>AngularJS</h5>
+        </li>
+        <li>
+          <i class="fa fa-cloud"></i>
+          <h5>Django</h5>
+        </li>
+        <li>
+          <i class="fa fa-cubes"></i>
+          <h5>AWS SDK</h5>
+        </li>
+        <li>
+          <i class="fa fa-code"></i>
+          <h5>jQuery</h5>
+        </li>
+        <li>
+          <i class="fa fa-coffee"></i>
+          <h5>ExpressJS</h5>
+        </li>
+      </ul>
+    </div>
+    <div class="resume-info">
+      <h4>Education</h4>
+      <div class="sep2"></div>
+      <ul>
+        {% for education in site.categories.education %}
+          <li>
+            <h5>{{ education.title }}</h5>
+            <span class="year"><i class="fa fa-calendar"></i> {{ education.timespan | join: " - " }}</span>
+            <p>{{ education.school }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
     <div class="resume-info">
       <h4>Work Experience</h4>
       <div class="sep2"></div>
@@ -49,49 +92,6 @@
           <p>C# <span>65%</span></p>
           <div class="skills-bg"><span></span></div>
         </li>
-      </ul>
-    </div>
-    <div class="services-info">
-      <h4>Frameworks</h4>
-      <div class="sep2"></div>
-      <ul>
-        <li>
-          <i class="fa fa-smile-o"></i>
-          <h5>Ruby on Rails</h5>
-        </li>
-        <li>
-          <i class="fa fa-html5"></i>
-          <h5>AngularJS</h5>
-        </li>
-        <li>
-          <i class="fa fa-cloud"></i>
-          <h5>Django</h5>
-        </li>
-        <li>
-          <i class="fa fa-cubes"></i>
-          <h5>AWS SDK</h5>
-        </li>
-        <li>
-          <i class="fa fa-code"></i>
-          <h5>jQuery</h5>
-        </li>
-        <li>
-          <i class="fa fa-coffee"></i>
-          <h5>ExpressJS</h5>
-        </li>
-      </ul>
-    </div>
-    <div class="resume-info">
-      <h4>Education</h4>
-      <div class="sep2"></div>
-      <ul>
-        {% for education in site.categories.education %}
-          <li>
-            <h5>{{ education.title }}</h5>
-            <span class="year"><i class="fa fa-calendar"></i> {{ education.timespan | join: " - " }}</span>
-            <p>{{ education.school }}</p>
-          </li>
-        {% endfor %}
       </ul>
     </div>
     <div class="resume-info">
