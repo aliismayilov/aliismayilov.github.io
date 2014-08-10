@@ -1,7 +1,6 @@
 ---
 title: "SilverKey Technologies"
 website: silverkey.az
-category: employer
 timespan: [2008, 2010]
 job: Software Developer
 ---

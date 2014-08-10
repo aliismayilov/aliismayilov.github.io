@@ -1,7 +1,6 @@
 ---
 title: "Microsoft Azerbaijan"
 website: microsoft.az
-category: employer
 timespan: [2008, 2011]
 job: Webmaster
 ---
