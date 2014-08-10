@@ -271,6 +271,32 @@
                     {% endfor %}
                   </ul>
                 </div>
+                <div class="resume-info">
+                  <h4>Certification</h4>
+                  <div class="sep2"></div>
+                  <ul>
+                    {% for certification in site.categories.certification %}
+                      <li>
+                        <h5>{{ certification.title }}</h5>
+                        <span class="year"><i class="fa fa-calendar"></i> {{ certification.date | date: "%Y" }}</span>
+                        <p><a href="{{ certification.pdf_file }}" target="_blank">{{ certification.provider }} (PDF file)</a></p>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                <div class="resume-info">
+                  <h4>Courses</h4>
+                  <div class="sep2"></div>
+                  <ul>
+                    {% for course in site.categories.course %}
+                      <li>
+                        <h5>{{ course.title }}</h5>
+                        <span class="year"><i class="fa fa-calendar"></i> {{ course.date | date: "%Y" }}</span>
+                        <p><a href="{{ course.pdf_file }}" target="_blank">{{ course.provider }} (PDF file)</a></p>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
               </div>
             </section>
             <!-- SECTION 3 - CV / RESUME -->
