@@ -59,7 +59,7 @@
         <nav>
           <ul class="navigation">
             <li><a href="#profile">Profile <i class="fa fa-user"></i></a></li>
-            <li><a href="{% if page.url contains '/descripting/' %}/{% endif %}#descripting">Descripting <i class="fa fa-pencil"></i></a></li>
+            <li><a href="{% if page.url contains '/blog/' %}/{% endif %}#blog">Descripting <i class="fa fa-pencil"></i></a></li>
             <li><a href="#portfolio">Portfolio <i class="fa fa-briefcase"></i></a></li>
             <li><a href="#resume">Resume <i class="fa fa-file-text"></i></a></li>
             <li><a href="#contact">Contact <i class="fa fa-envelope"></i></a></li>
@@ -107,14 +107,14 @@
     "use strict";
     var slideMap = {
       '#profile': 0,
-      '#descripting': 1,
+      '#blog': 1,
       '#portfolio': 2,
       '#resume': 3,
       '#contact': 4
     }
     $('.flexslider').flexslider({
       startAt:
-      {% if page.url contains '/descripting/' %}
+      {% if page.url contains '/blog/' %}
         1
       {% else %}
         (window.location.hash in slideMap ? slideMap[window.location.hash] : 0)
