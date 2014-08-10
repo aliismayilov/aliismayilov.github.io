@@ -14,4 +14,4 @@ Yesterday I bought a template from [themeforest.net](http://themeforest.net). Wh
 
 I highly recommend to take a look at themeforest to find a good templates for a different purposes.
 
-Now I have 1 domain, 1 repo and 1 website. Profit!
+Now I have 1 domain, 1 repo and 1 website. And it all freely hosted on GitHub Pages! Profit!
