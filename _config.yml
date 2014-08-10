@@ -1,6 +1,7 @@
 name: Ali Ismayilov - professional page
 markdown: redcarpet
 url: alii.pro
+full_url: http://alii.pro
 exclude: ['Gemfile', 'Gemfile.lock', 'CNAME']
 sass:
   sass_dir: assets/scss

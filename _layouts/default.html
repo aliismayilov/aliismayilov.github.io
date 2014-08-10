@@ -5,9 +5,11 @@
 <head>
   <!-- Meta -->
   <meta charset="utf-8">
-  <meta name="keywords" content="HTML5 Template" />
-  <meta name="description" content="Multipress - Responsive Multipurpose HTML5 Template">
+  <meta name="keywords" content="{{ page.tags | join: ',' }}">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.data.my.about }}{% endif %}">
   <meta name="author" content="{{ site.data.my.name }}">
+  <link rel="canonical" href="{{ site.full_url }}{{ page.url | replace:'index.html','' }}">
+  {% include ograph.html %}
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
 
