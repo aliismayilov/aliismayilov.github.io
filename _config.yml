@@ -5,3 +5,7 @@ exclude: ['Gemfile', 'Gemfile.lock', 'CNAME']
 sass:
   sass_dir: assets/scss
   style: :compressed
+gems:
+  - jekyll-sitemap
+  - jekyll-mentions
+  - jemoji
