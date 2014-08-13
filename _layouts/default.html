@@ -52,22 +52,22 @@
 <div class="main-content">
   <div class="container no-padding">
     <div class="row">
-      <div class="col-sm-3 l-content">
+      <div class="col-sm-2 col-md-3 l-content">
         <div class="profile-pic">
           <div class="pic-bg"><a href="/"><img src="/assets/photo/profile.png" class="img-responsive" alt=""/></a></div>
         </div>
         <nav>
           <ul class="navigation">
-            <li><a href="#profile">Profile <i class="fa fa-user"></i></a></li>
-            <li><a href="{% if page.url contains '/blog/' %}/{% endif %}#blog">Descripting <i class="fa fa-pencil"></i></a></li>
-            <li><a href="#portfolio">Portfolio <i class="fa fa-briefcase"></i></a></li>
-            <li><a href="#resume">Resume <i class="fa fa-file-text"></i></a></li>
-            <li><a href="#contact">Contact <i class="fa fa-envelope"></i></a></li>
+            <li><a href="#profile"><span class="hidden-sm">Profile</span> <i class="fa fa-user"></i></a></li>
+            <li><a href="{% if page.url contains '/blog/' %}/{% endif %}#blog"><span class="hidden-sm">Descripting</span> <i class="fa fa-pencil"></i></a></li>
+            <li><a href="#portfolio"><span class="hidden-sm">Portfolio</span> <i class="fa fa-briefcase"></i></a></li>
+            <li><a href="#resume"><span class="hidden-sm">Resume</span> <i class="fa fa-file-text"></i></a></li>
+            <li><a href="#contact"><span class="hidden-sm">Contact</span> <i class="fa fa-envelope"></i></a></li>
           </ul>
         </nav>
       </div>
 
-      <div class="col-sm-9 r-content">
+      <div class="col-sm-10 col-md-9 r-content">
         <div class="flexslider">
           <div class="slides">
             {{ content }}
