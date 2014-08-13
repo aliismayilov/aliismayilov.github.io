@@ -9,4 +9,5 @@ sass:
 gems:
   - jekyll-sitemap
   - jekyll-mentions
+  - jekyll-redirect-from
   - jemoji
