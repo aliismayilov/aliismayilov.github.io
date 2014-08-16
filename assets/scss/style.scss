@@ -677,6 +677,8 @@ article h3 a {
 	color: #a1a1a1;
 	font-size: 12px;
 	padding: 10px 0;
+	float: left;
+	margin-right: 20px;
 }
 
 .post-meta i {
@@ -1242,8 +1244,4 @@ footer {
 
 .flex-active-slide > div {
 	min-height: 472px;
-}
-
-.display-none {
-	display: none;
 }
