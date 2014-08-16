@@ -3,25 +3,26 @@ layout: default
 ---
 {% include profile.html %}
 <section class="flex-active-slide">
-  <div class="item blog blog-single">
+  <div class="item blog blog-single" itemscope itemtype="http://schema.org/Article">
     <div class="page-head">
       <div class="row">
         <div class="col-md-12">
-          <h3>{{ page.title }}</h3>
+          <h3 itemprop="name">{{ page.title }}</h3>
           <div class="post-meta">
-            <i class="fa fa-calendar"></i> {{ page.date | date: "%b %-d, %Y" }}
+            <i class="fa fa-calendar" itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}"></i> {{ page.date | date: "%b %-d, %Y" }}
+          </div>
+          <div class="post-meta display-none">
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">{{ site.data.my.name }}</span>
+            </span>
           </div>
         </div>
       </div>
     </div>
 
     <div class="blog-wrap">
-      <article>
-        <div class="row">
-          <div class="col-md-12">
-            {{ content }}
-          </div>
-        </div>
+      <article itemprop="articleBody">
+        {{ content }}
       </article>
 
       <div class="comments-wrap">
