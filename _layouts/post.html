@@ -9,9 +9,8 @@ layout: default
         <div class="col-md-12">
           <h3 itemprop="name">{{ page.title }}</h3>
           <div class="post-meta" itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">
-            <i class="fa fa-calendar"></i> {{ page.date | date: "%b %-d, %Y" }}
-          </div>
-          <div class="post-meta">
+            <i class="fa fa-calendar"></i>
+            <a href="{{ page.url }}">{{ page.date | date: "%b %-d, %Y" }}</a>
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
               <i class="fa fa-user"></i> <a href="https://plus.google.com/+AliIsmayilov1?rel=author"><span itemprop="name">{{ site.data.my.name }}</span></a>
             </span>
