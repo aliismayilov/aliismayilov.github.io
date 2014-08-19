@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
   $('.skills-info').appear(function() {
     $('.skills-bg').each(function() {
       var percentage = $(this).parent().find('p span').text();
-      $(this).find('span').css('width', percentage);
+      $(this).find('span').animate({ width: percentage }, 1000);
     });
   },{accX: 0, accY: -150});
 });
