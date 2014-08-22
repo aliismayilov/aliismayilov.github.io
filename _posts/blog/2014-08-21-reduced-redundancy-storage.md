@@ -24,7 +24,7 @@ x-amz-storage-class: REDUCED_REDUNDANCY
 
 You can also confirm the result on AWS Console:
 
-![Reduced Redundancy](/images/2014/rrs.png 'Yes you can change it manually too.')
+<img src="/images/2014/rrs.png" alt="Reduced Redundancy" title="Yes you can change it manually too." class="img-responsive">
 
 As FAQ says it is also good for thumbnails. First library I checked was [Paperclip](https://github.com/thoughtbot/paperclip).
 Turned out that they already had support for it and I never noticed it. Because they buried it inside the [documentation](http://rubydoc.info/gems/paperclip/Paperclip/Storage/S3) instead of frontpage, README. Check S3 libraries you use for RRS support. Don't miss it!
