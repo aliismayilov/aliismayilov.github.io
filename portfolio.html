@@ -33,3 +33,22 @@ layout: default
     </div>
   </div>
 </section>
+
+<script src="/assets/js/jquery.mixitup.min.js"></script>
+<script src="/assets/js/nivo-lightbox.min.js"></script>
+<script>
+  /* Mixitup Portfolio */
+  jQuery(document).ready(function($) {
+    "use strict";
+    $('.portfolio').mixitup({
+      targetSelector: '.item',
+      transitionSpeed: 450
+    });
+  });
+
+  /* Nivo - Lightbox */
+  jQuery(document).ready(function($) {
+    "use strict";
+      $('.nivo-lbox').nivoLightbox({ effect: 'fade' });
+  });
+</script>

@@ -36,6 +36,7 @@
   <![endif]-->
 
   <link rel="stylesheet" href="/assets/scss/main.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
 {% include analytics.html %}
@@ -58,11 +59,11 @@
         </div>
         <nav>
           <ul class="navigation">
-            <li><a href="#profile"><span class="hidden-sm">Profile</span> <i class="fa fa-user"></i></a></li>
-            <li><a href="{% if page.url contains '/blog/' %}/{% endif %}#blog"><span class="hidden-sm">Descripting</span> <i class="fa fa-pencil"></i></a></li>
-            <li><a href="#portfolio"><span class="hidden-sm">Portfolio</span> <i class="fa fa-briefcase"></i></a></li>
-            <li><a href="#resume"><span class="hidden-sm">Resume</span> <i class="fa fa-file-text"></i></a></li>
-            <li><a href="#contact"><span class="hidden-sm">Contact</span> <i class="fa fa-envelope"></i></a></li>
+            <li><a href="/profile.html"><span class="hidden-sm">Profile</span> <i class="fa fa-user"></i></a></li>
+            <li><a href="/"><span class="hidden-sm">Descripting</span> <i class="fa fa-pencil"></i></a></li>
+            <li><a href="/portfolio.html"><span class="hidden-sm">Portfolio</span> <i class="fa fa-briefcase"></i></a></li>
+            <li><a href="/resume.html"><span class="hidden-sm">Resume</span> <i class="fa fa-file-text"></i></a></li>
+            <li><a href="/contact.html"><span class="hidden-sm">Contact</span> <i class="fa fa-envelope"></i></a></li>
           </ul>
         </nav>
       </div>
@@ -83,16 +84,7 @@
 <!-- MAIN CONTENT -->
 
 <!-- JavaScript -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="/assets/js/jquery.mixitup.min.js"></script>
-<script src="/assets/js/nivo-lightbox.min.js"></script>
-<script src="/assets/js/jquery.appear.js"></script>
-<script src="/assets/js/moment.min.js"></script>
-<script src="/assets/js/moment-timezone-with-data-2010-2020.min.js"></script>
 <script src="/assets/js/main.js"></script>
-
-<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-<script src="/assets/js/gmaps.js"></script>
 
 </body>
 </html>
