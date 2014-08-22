@@ -12,7 +12,9 @@ redirect_from:
           <div class="row">
             {% if post.image %}
               <div class="col-xs-3">
-                <img src="{{ post.image }}" class="img-responsive" alt=""/>
+                <a href="{{ post.url }}">
+                  <img src="{{ post.image }}" class="img-responsive" alt=""/>
+                </a>
               </div>
             {% endif %}
             <div class="{% if post.image %}col-xs-9{% endif %}">
