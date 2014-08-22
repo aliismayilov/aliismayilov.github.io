@@ -1,4 +1,7 @@
-<section class="no-display">
+---
+layout: default
+---
+<section class="flex-active-slide">
   <div class="item resume" id="4">
     <div class="services-info">
       <h4>Frameworks</h4>
@@ -115,3 +118,17 @@
     </div>
   </div>
 </section>
+
+<script src="/assets/js/jquery.appear.js"></script>
+<script>
+  /* Skills */
+  jQuery(document).ready(function($) {
+    "use strict";
+    $('.skills-info').appear(function() {
+      $('.skills-bg').each(function() {
+        var percentage = $(this).parent().find('p span').text();
+        $(this).find('span').animate({ width: percentage }, 1000);
+      });
+    },{accX: 0, accY: -150});
+  });
+</script>
