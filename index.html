@@ -4,8 +4,28 @@ permalink: /
 redirect_from:
   - /blog/
 ---
-{% include profile.html %}
-{% include blog.html %}
-{% include portfolio.html %}
-{% include resume.html %}
-{% include contact.html %}
+<section class="flex-active-slide">
+  <div class="item blog" id="2">
+    <div class="blog-wrap">
+      {% for post in site.categories.blog %}
+        <article>
+          <div class="row">
+            {% if post.image %}
+              <div class="col-xs-3">
+                <img src="{{ post.image }}" class="img-responsive" alt=""/>
+              </div>
+            {% endif %}
+            <div class="{% if post.image %}col-xs-9{% endif %}">
+              <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+              <div class="post-meta">
+                <i class="fa fa-calendar"></i>
+                <a href="{{ post.url }}">{{ post.date | date: "%b %-d, %Y" }}</a>
+              </div>
+              {{ post.excerpt }}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
