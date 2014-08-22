@@ -84,3 +84,11 @@ $(window).load(function() {
     });
   }
 });
+
+/* Responsive images in blog posts */
+$(function () {
+  'use strict';
+  $('.blog-single article img').each(function() {
+    $(this).addClass('img-responsive');
+  });
+});
