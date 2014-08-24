@@ -11,3 +11,4 @@ gems:
   - jekyll-mentions
   - jekyll-redirect-from
   - jemoji
+permalink: pretty
