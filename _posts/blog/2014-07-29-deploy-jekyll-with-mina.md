@@ -2,6 +2,7 @@
 layout: post
 title: Deploy Jekyll with Mina
 tags: jekyll mina centos digitalocean nginx
+category: blog
 ---
 
 This blog is running on CentOS 7 server of [DigitalOcean](https://www.digitalocean.com/?refcode=ed777d54b05a).

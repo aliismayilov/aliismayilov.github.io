@@ -2,6 +2,7 @@
 layout: post
 title: Unified layout
 tags: themeforest review jekyll
+category: blog
 ---
 
 I used to manage 2 personal websites.

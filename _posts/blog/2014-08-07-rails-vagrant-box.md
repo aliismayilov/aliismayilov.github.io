@@ -3,6 +3,7 @@ layout: post
 title: Rails Vagrant box
 tags: vagrant rails windows puppet
 external_image: http://upload.wikimedia.org/wikipedia/commons/8/87/Vagrant.png
+category: blog
 ---
 
 Recently, I had a pleasure to work with @kinnaj.

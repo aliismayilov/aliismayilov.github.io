@@ -2,6 +2,7 @@
 layout: post
 title:  "First post"
 tags: hello world
+category: blog
 ---
 
 So, this is my n<sup>th</sup> attempt to start a real blogging. It is weekend, and it sounds very like a diet starting. If I can push it to the next weekends, I'll keep it playing.

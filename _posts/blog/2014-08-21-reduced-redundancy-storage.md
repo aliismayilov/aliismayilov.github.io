@@ -3,6 +3,7 @@ layout: post
 title:  Amazon Reduced Redundancy Storage
 tags: aws s3 paperclip
 image: /images/2014/rrs.png
+category: blog
 ---
 
 While working on a network application which was using Amazon S3 as a temporary file storage,

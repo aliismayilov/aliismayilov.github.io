@@ -2,6 +2,7 @@
 layout: post
 title:  Visual identity of the blog
 tags: pure css bootstrap foundation
+category: blog
 ---
 
 One of my unrealized obsessions is fine arts.

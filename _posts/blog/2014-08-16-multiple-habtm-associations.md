@@ -2,6 +2,7 @@
 layout: post
 title:  Multiple HABTM associations between 2 models in Rails
 tags: [rails, activerecord, models, has_and_belongs_to_many, multiple, relationship, rspec]
+category: blog
 ---
 
 There can be a case where you want to have more than one `has_and_belongs_to_many` associations between 2 models.
