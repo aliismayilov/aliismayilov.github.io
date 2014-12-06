@@ -7,7 +7,7 @@ category: blog
 ---
 
 Recently I wrote a [recipe](https://github.com/yeoman/generator-gulp-webapp/blob/master/docs/recipes/aws-s3-deployment.md) for how to deploy a Yeoman Gulp Webapp to Amazon S3.
-But I'd like to give more configuration on deploying to S3.
+Now I'd like to give more configuration on deploying to S3.
 Specifically, optimization notes.
 
 #### Revving
