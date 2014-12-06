@@ -19,7 +19,7 @@ Follow your preferred tool for Ruby version management and install ruby on the s
 
 Set up your jekyll blog on your local machine and make sure that it is ready for public. I use GitHub. You can use any git repository provider, but make sure that it will be available for pull from your CentOS machine. It can be even on your CentOS server!
 
-### Mina configuration
+#### Mina configuration
 
 Initial Mina deploy file can be created with `mina init` command.
 
@@ -55,7 +55,7 @@ end
 Pretty straightforward. Declare ssh domain and user, deployment directory, repository to pull from (master branch).
 Prepare the rbenv environment (loads .ruby-version file) and actual deploy process.
 
-### Nginx configuration
+#### Nginx configuration
 
 First you'll need to create `/etc/nginx/sites-available/` and `/etc/nginx/sites-enabled/` folders.
 I like this approach because you can easily symlink/unlink website configurations.
@@ -89,7 +89,7 @@ $ sudo ln -s /etc/nginx/sites-available/blog.alii.pro /etc/nginx/sites-enabled/b
 {% endhighlight %}
 
 
-### Conclusion
+#### Conclusion
 
 These were the steps needed to take in order to set up Jekyll blog on CentOS. It can be easily deployed via `git push` and `mina deploy` commands.
 
