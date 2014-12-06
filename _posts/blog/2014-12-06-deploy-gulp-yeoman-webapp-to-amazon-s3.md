@@ -25,7 +25,7 @@ Compression should not be confused with minification. Gzipping can save up to 50
 
 I tried to do it on my own project with [gulp-gzip](https://www.npmjs.org/package/gulp-gzip), but I had a hard time with Content-Types and Content-Encoding. Filename references can be solved with [gulp-rev-replace](https://www.npmjs.org/package/gulp-rev-replace). Which is also described in asset revisioning recipe.
 
-The easiest solution I found was to use [gulp-awspublish](https://www.npmjs.org/package/gulp-awspublish) which already has a built-in support for it. We are already using it for deployment. Just add the following command and that's it:
+The easiest solution I found was to use [gulp-awspublish](https://www.npmjs.org/package/gulp-awspublish) which already has a built-in support for it. We are already using it for deployment. Just add the following line and that's it:
 
 ```diff
 gulp.task('deploy', ['build'], function () {
