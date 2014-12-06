@@ -655,6 +655,12 @@ a:hover {
 	margin-bottom: 0px;
 	overflow: hidden;
 	background: #fff;
+
+  .blog-wrap {
+    .thumbnail img {
+      max-height: 210px;
+    }
+  }
 }
 
 article {
