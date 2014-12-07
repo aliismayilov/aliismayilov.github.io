@@ -6,7 +6,7 @@ image: /images/2014/gulp-2x.png
 category: blog
 ---
 
-Recently I wrote a [recipe](https://github.com/yeoman/generator-gulp-webapp/blob/master/docs/recipes/aws-s3-deployment.md) for how to deploy a Yeoman Gulp Webapp to Amazon S3.
+Recently I wrote a [recipe](https://github.com/yeoman/generator-gulp-webapp/blob/67e0aae219529de1ce7648b336b3c77205e025bb/docs/recipes/aws-s3-deployment.md) for how to deploy a Yeoman Gulp Webapp to Amazon S3.
 Now I'd like to give more configuration on deploying to S3.
 Specifically, optimization notes.
 
@@ -15,9 +15,9 @@ Specifically, optimization notes.
 After you follow the recipe and add `gulp deploy` task, I highly recommend you to revision your assets.
 The above recipe puts a long expiry date which means that once the assets have been downloaded to client's browser, they will stay there for a long time. Which is actually good, unless you don't make any changes.
 
-There's a recipe for that: [Asset revisioning](https://github.com/yeoman/generator-gulp-webapp/blob/master/docs/recipes/revving.md). Just follow it, straigtforward.
+There's a recipe for that: [Asset revisioning](https://github.com/yeoman/generator-gulp-webapp/blob/67e0aae219529de1ce7648b336b3c77205e025bb/docs/recipes/asset-revisioning.md). Just follow it, straigtforward.
 
-Every time you update your assets they will be renamed to include a hash `app-4321231.js`, which will make the clients to download assets every time you update them.
+> This recipe demonstrates how to set up simple static asset revisioning (aka revving) for CSS and JS by appending content hash to their filenames `unicorn.css` → `unicorn-098f6bcd.css`.
 
 #### Compression (gzip)
 
