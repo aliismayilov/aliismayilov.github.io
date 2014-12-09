@@ -27,18 +27,18 @@ layout: default
 <script>
   /* Google map */
   $(function () {
-    "use strict";
-    var lat = -22.948833,
-        lng = -43.193128,
+    'use strict';
+    var lat = 52.516667,
+        lng = 13.383333,
         map = new GMaps({
-          el: "#map",
+          el: '#map',
           lat: lat,
           lng: lng,
-          zoom: 6,
+          zoom: 4,
           zoomControl : true,
           zoomControlOpt: {
-            style : "BIG",
-            position: "TOP_LEFT"
+            style : 'BIG',
+            position: 'TOP_LEFT'
           },
           panControl : true,
           streetViewControl : false,
@@ -55,6 +55,6 @@ layout: default
   /* Moment.js */
   $(function () {
     'use strict';
-    $('.contact-info time').html(moment().tz('America/Sao_Paulo').format('h:mm a'));
+    $('.contact-info time').html(moment().tz('Berlin').format('h:mm a'));
   });
 </script>
