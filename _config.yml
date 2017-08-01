@@ -1,5 +1,5 @@
 name: Descripting - Ali Ismayilov's blog
-markdown: redcarpet
+markdown: kramdown
 url: http://alii.pro
 short_url: alii.pro
 exclude: ['Gemfile', 'Gemfile.lock', 'CNAME']
