@@ -1,10 +1,10 @@
 ---
 title: Mietright GmbH
 website: wenigermiete.de
-timespan: [2017, Present]
+timespan: [2017, 2018]
 job: Senior Software Developer
 sitemap: false
 category: employer
 ---
 
-Building justice as a service, defending tenant rights.
+Building legal as a service, enforcing tenant rights.
