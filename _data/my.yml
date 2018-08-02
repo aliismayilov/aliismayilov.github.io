@@ -9,5 +9,10 @@ twitter_url: https://twitter.com/qaralama
 github_url: https://github.com/aliismayilov
 linkedin_url: http://www.linkedin.com/in/aliismayilov
 gravatar: https://s.gravatar.com/avatar/9e9145433392d008199ab60e80a7f87d?s=512
-about: 'I have 6 years experience as a web developer. I have a love of clean, modern frameworks, and I have lots of experience with different frameworks and architectures (including SOA). I have a reasonable grasp of using Ruby and JavaScript frameworks, including AngularJS.'
+about: >
+  I have 6 years experience as a web developer.
+  I have a love of clean, modern frameworks,
+  and I have lots of experience
+  with different frameworks and architectures (including SOA and Event Driven).
+  I have a reasonable grasp of using Ruby and JavaScript frameworks.
 fb_id: 1291157572
