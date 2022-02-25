@@ -2,4 +2,3 @@
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}" />
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.data.my.about }}{% endif %}" />
 <meta property="og:image" content="{% if page.image %}{{ site.url }}{{ page.image }}{% elsif page.external_image %}{{ page.external_image }}{% else %}{{ site.data.my.gravatar }}{% endif %}">
-<meta property="fb:admins" content="{{ site.data.my.fb_id }}" />
